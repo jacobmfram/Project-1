@@ -1,0 +1,53 @@
+* {
+	margin-top: 0; 
+	border: 0; 
+    padding: 0; 
+    
+}
+
+img {
+    width: 40px; 
+    height: 40px;
+    position: relative; 
+    top: 12px; 
+}
+
+h1 {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 92px;
+    padding: 80px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+  }
+body {
+    background: url("images/curtain.jpg")
+}
+
+.container {
+    position: relative; 
+    top: 80px; 
+}
+
+.wrapper {
+    width: 1000px;
+    position: relative;
+    right: 210px; 
+}
+
+
+footer {
+	background:rgb(206,27,27); 
+	opacity: 0.9;
+	width: 1000%; 
+	margin-top: 5%; 
+	padding: 1% 0; 
+    overflow: auto;  
+    position: fixed; 
+}
+
+footer p {
+    color: #FFF; 
+    position: relative; 
+    left: 40px; 
+}
