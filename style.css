@@ -1,0 +1,174 @@
+* {
+	margin: 0; 
+	border: 0; 
+	padding: 0; 
+}
+
+body {
+	background: #FFF; 
+	font-family: 'Hind', sans-serif;
+	font-size: 18px; 
+	position: relative; 
+}
+
+.logo {
+	width: 40px;
+	height: 40px;
+}
+
+h1 {
+	font-family: 'Nobile', sans-serif; 
+	text-align: center; 
+	font-size: 175%; 
+	color: #4A4444;
+	text-transform: uppercase;
+	letter-spacing: 3px; 
+	padding: 3% 0; 
+}
+
+h3 {
+	font-family: 'Nobile', sans-serif; 
+	text-align: center; 
+	color: #4A4444;
+	text-transform: uppercase;
+	letter-spacing: 1%; 
+}
+
+p {
+	padding: 2%; 
+	color: #4A4444; 
+	text-align: justify; 
+}
+
+img {
+	max-width: 100%; 
+	height: auto; 
+}
+
+#banner-wrapper {
+	max-width: 1280px; 
+	margin: 0 auto; 
+}
+
+/* Start Image Slider Style */
+.slider {
+	width: 100%;
+}
+
+.slides img {
+	min-width: 100%; 
+}
+
+/* End Image Slider Style */
+
+.one-half {
+	width: 44%; 
+	float: left; 
+	margin: 2% 0 3% 4%; 
+	text-align: center; 
+}
+
+.one-third {
+	width: 28%; 
+	float: left; 
+	margin: 2% 0 3% 4%; 
+	text-align:center;
+}
+
+.left-col {
+	width: 60%; 
+	float: left; 
+	margin: 4% 0 4% 4%; 
+}
+
+.sidebar {
+	width: 26%; 
+	float: right; 
+	margin: 4%;
+}
+
+.sidebar img {
+	opacity: 0.8;
+}
+
+.clearfix {
+	clear: both; 
+}
+
+/* Start Prallax Section */
+.parallax-1 {
+	background: url("http://wall2born.com/data/out/93/image-50468318-hd-backgrounds-free-download.jpg") repeat fixed 100%; 
+	text-align: center; 
+}
+
+.parallax-inner {
+	padding-top: 90px; 
+	padding-bottom: 300px; 
+}
+
+.parallax-2 {
+	background: url("http://wall2born.com/data/out/93/image-50468318-hd-backgrounds-free-download.jpg") repeat fixed 100%; 
+	text-align: center; 
+}
+
+.parallax-inner h3, .parallax-inner p {
+	color: #F1F1F1; 
+}
+
+/* End Parallax Section */
+footer {
+	background:rgb(206,27,27); 
+	opacity: 0.9;
+	width: 100%; 
+	margin-top: 5%; 
+	padding: 1% 0; 
+	overflow: auto;  
+}
+
+footer p {
+	color: #FFF; 
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+	.slider {
+		display: none; 
+	}
+	.parallax-inner {
+		display: none; 
+	}
+
+	.one-third {
+		width: 100%; 
+		margin: 4% 0; 
+	}
+
+	.one-half {
+		display: none;
+	}
+
+	h1 {
+		font-size: 125%;
+	}
+
+	.left-col {
+		width: 100%;
+		margin: 0 0 3% 0;
+	}
+	.sidebar {
+		width: 100%;
+		margin: 0; 
+	}
+
+	img {
+		width: 100%;
+	}
+
+	h3 {
+		padding-top: 3%;
+	}
+}
+
+
+ 
+
