@@ -25,7 +25,7 @@ function AJAXRequest() {
       for (let i = 0; i < results.length; i++) {
         let movieDiv = document.createElement('div');
         movieDiv.className = 'movieItems';
-        movieDiv.innerHTML = '<img src="https://image.tmdb.org/t/p/w500/' + response.results[i].poster_path + '">' + '<br>';
+        movieDiv.innerHTML = '<img src="https://image.tmdb.org/t/p/w200/' + response.results[i].poster_path + '">' + '<br>';
         movieDiv.innerHTML += response.results[i].title + '<br>';
         movieDiv.innerHTML += response.results[i].release_date + '<br>';
         movieDiv.innerHTML += response.results[i].overview + '<br>';
