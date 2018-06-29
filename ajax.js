@@ -1,10 +1,17 @@
+// SELECTORS ----------------------------------------------
 
-const apiKey = '281c7e89ab14ec4a101576aa20365488';
+const form = document.getElementById('form');
+const contentSection = document.getElementById('content-section');
+
+// APIKEY & SEARCH ----------------------------------------
+
+const apiKey = '';
+let value = '';
 
 // AJAX REQUEST & CONTENT CREATION -------------------------
 
 function AJAXRequest() {
-  let queryURL = `https://api.themoviedb.org/3/movie/550?api_key=${apiKey}`;
+  let queryURL = `https://api.themoviedb.org/3/search/movie?query=${value}&api_key=${apiKey}&language=en-US&page=1&include_adult=false&append_to_response=images&include_image_language=en,null`;
   // INITIALIZE AJAX REQUEST
   let xhr = new XMLHttpRequest();
   // OPEN AJAX REQUEST
@@ -13,20 +20,36 @@ function AJAXRequest() {
   xhr.onload = function() {
     if (xhr.status === 200) {
       let response = JSON.parse(xhr.responseText);
-      console.log(response);
-      // for (let i = 0; i < 10; i++) {
-      //   let gifDiv = document.createElement('div');
-      //   gifDiv.innerHTML = `<img src="${response.data[i].images.fixed_height.url}"
-      //   data-still="${response.data[i].images.fixed_height_still.url}"
-      //   data-animate="${response.data[i].images.fixed_height.url}"
-      //   state="animate" title="Rating: ${response.data[i].rating}">`;
-      //   contentSection.appendChild(gifDiv);
-      //   console.log(gifDiv);
-      // }
+      let results = response.results;
+      console.log(results);
+      for (let i = 0; i < results.length; i++) {
+        let movieDiv = document.createElement('div');
+        movieDiv.className = 'movieItems';
+        movieDiv.innerHTML = '<img src="https://image.tmdb.org/t/p/w500/' + response.results[i].poster_path + '">' + '<br>';
+        movieDiv.innerHTML += response.results[i].title + '<br>';
+        movieDiv.innerHTML += response.results[i].release_date + '<br>';
+        movieDiv.innerHTML += response.results[i].overview + '<br>';
+        movieDiv.innerHTML += response.results[i].vote_average;
+        contentSection.appendChild(movieDiv);
+      }
     }
   }
   //SEND AJAX REQUEST
   xhr.send();
 }
 
-AJAXRequest();
+function removePrevSearches() {
+  while (contentSection.firstElementChild) {
+    contentSection.removeChild(contentSection.firstElementChild);
+  }
+}
+
+// LISTENERS -------------------------------------------------------------
+// Runs request for searched items and stores previous searches in footer
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  removePrevSearches();
+  value = document.getElementById('search').value;
+  AJAXRequest();
+});
