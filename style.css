@@ -170,5 +170,94 @@ footer p {
 }
 
 
- 
 
+
+/* searched movie HTML page's CSS */
+#mov-row {
+
+}
+
+#searched-movie {
+	background-image: url("images/mov-background.jpg");
+	height: 300%;
+}
+
+#searched-mov-img {
+	margin-top: 3%;
+	/* position: relative;
+	left: 10%; */
+}
+
+#title-text {
+	font-size: 250%;
+}
+
+#movie-title {
+	font-family: 'Abril Fatface', cursive;
+}
+
+#movie-img, #movie-info {
+	margin-top: 3%;
+}
+
+#movie-overview, .overview {
+	float: left;
+}
+
+#movie-overview {
+	margin-top: 3%;
+	margin-bottom: 2%;
+}
+
+.overview, .featured-crew {
+	font-size: 25px;
+	font-family: 'Abril Fatface', cursive;
+}
+
+#overview-text {
+	float: left;
+	margin-top: 1%;
+	font-family: 'Kalam', cursive;
+}
+
+#movie-info {
+	color: white;
+	margin-left: 3%;
+	padding: 3%;
+	border-radius: 50px;
+	background-color: rgb(51, 102, 153, 0.6);
+}
+
+.overview, .featured-crew, .crew {
+	color: white;
+}
+
+#crew-member {
+	margin-left: 5%;
+}
+
+.crew {
+	font-size: 20px;
+	font-family: 'Playfair Display SC', serif;
+}
+
+.cast-intro {
+	margin-top: 25px;
+	font-size: 175%;
+	font-family: 'Abril Fatface', cursive;
+}
+
+#cast-mem-img {
+	height: 200px;
+	width: 155px;
+	margin-top: 30px;
+	margin-left: 25px;
+}
+
+#cast-name {
+	text-align: center;
+	margin-top: 3%;
+	font-size: 100%;
+	margin-left: 25px;
+	font-family: 'Playfair Display SC', serif;
+}
