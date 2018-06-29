@@ -1,17 +1,11 @@
 // SELECTORS ----------------------------------------------
 
-const form = document.getElementById('form');
-const contentSection = document.getElementById('content-section');
-
-// APIKEY & SEARCH ----------------------------------------
-
-const apiKey = '';
-let value = '';
+const mostPopular = document.getElementById('mostPopular');
 
 // AJAX REQUEST & CONTENT CREATION -------------------------
 
-function AJAXRequest() {
-  let queryURL = `https://api.themoviedb.org/3/search/movie?query=${value}&api_key=${apiKey}&language=en-US&page=1&include_adult=false&append_to_response=images&include_image_language=en,null`;
+function NowPlaying() {
+  let queryURL = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
   // INITIALIZE AJAX REQUEST
   let xhr = new XMLHttpRequest();
   // OPEN AJAX REQUEST
@@ -30,7 +24,7 @@ function AJAXRequest() {
         movieDiv.innerHTML += response.results[i].release_date + '<br>';
         movieDiv.innerHTML += response.results[i].overview + '<br>';
         movieDiv.innerHTML += response.results[i].vote_average;
-        contentSection.appendChild(movieDiv);
+        mostPopular.appendChild(movieDiv);
       }
     }
   }
@@ -38,18 +32,4 @@ function AJAXRequest() {
   xhr.send();
 }
 
-function removePrevSearches() {
-  while (contentSection.firstElementChild) {
-    contentSection.removeChild(contentSection.firstElementChild);
-  }
-}
-
-// LISTENERS -------------------------------------------------------------
-// Runs request for searched items and stores previous searches in footer
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  removePrevSearches();
-  value = document.getElementById('search').value;
-  AJAXRequest();
-});
+NowPlaying();
