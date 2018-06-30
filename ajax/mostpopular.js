@@ -4,7 +4,7 @@ const mostPopular = document.getElementById('mostPopular');
 
 // AJAX REQUEST & CONTENT CREATION -------------------------
 
-function NowPlaying() {
+function MostPopular() {
   let queryURL = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
   // INITIALIZE AJAX REQUEST
   let xhr = new XMLHttpRequest();
@@ -32,4 +32,4 @@ function NowPlaying() {
   xhr.send();
 }
 
-NowPlaying();
+MostPopular();
